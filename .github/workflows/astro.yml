@@ -19,12 +19,9 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-          # Optional: Specify the root location of your Astro project inside the repository.
-          # path: .
-          # Optional: Specify the specific version of Node that should be used to build your site. Defaults to 16.
-          # node-version: 16
-          # Optional: Specify the Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile.
-          # package-manager: yarn
+          path: .
+          node-version: 16
+          package-manager: npm  # Specify your preferred package manager (e.g., npm, yarn, pnpm)
 
   deploy:
     needs: build
